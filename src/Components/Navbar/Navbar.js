@@ -12,9 +12,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import {
+    ThemProvider,
+    creatMuiTheme,
+} from '@mui/icons-material/Style'
 
 const pages = ['HOME', 'ABOUT US', 'EVENTS', 'CONTACT US'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,6 +41,7 @@ const Navbar = () => {
     };
 
     return (
+        <ThemProvider>
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -157,6 +163,7 @@ const Navbar = () => {
                 </Toolbar>
             </Container>
         </AppBar>
+        </ThemProvider>
     );
 };
 export default Navbar;
