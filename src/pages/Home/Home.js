@@ -28,8 +28,9 @@ function FormRow() {
   );
 }
 
-export default function NestedGrid() {
+export default function Home() {
   return (
+    <div>
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
         <Grid container item spacing={3}>
@@ -42,6 +43,7 @@ export default function NestedGrid() {
           <FormRow />
         </Grid>
       </Grid>
-    </Box>
+      </Box>
+    </div>
   );
 }

@@ -1,15 +1,16 @@
 import { Route, Switch } from "react-router-dom";
 import PersistentDrawerRight from "../Components/Navbar/Navbar";
 import { StyledEngineProvider } from "@mui/material/styles";
-import Home from '../Components/Home/Home'
+import Home from './Home/Home'
+import Andrew from "./andrew";
 const PagesRoutes = () => {
     return (
         <StyledEngineProvider injectFirst>
-            <PersistentDrawerRight>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                </Switch>
-            </PersistentDrawerRight>
+            <PersistentDrawerRight />
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/Andrew" component={Andrew} />
+            </Switch>
         </StyledEngineProvider>
     );
 };
