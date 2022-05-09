@@ -1,14 +1,22 @@
-
-import './App.css';
-import Navbar from '../src/Components/Navbar/Navbar'
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducers from './Redux/reducers/index'
+import Handleauthintication from "./Components/HandleAuthintication";
+const store = createStore(
+  rootReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-
-
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <Handleauthintication />
+        </div>
+      </BrowserRouter >
+    </Provider >
   );
 }
 
