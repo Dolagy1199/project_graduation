@@ -4,6 +4,7 @@ import { StyledEngineProvider } from "@mui/material/styles";
 import Home from './Home'
 import Andrew from "./andrew";
 import AboutUs from "./AboutUs"
+import Footer from "../Components/Footer"
 const PagesRoutes = () => {
     return (
         <StyledEngineProvider injectFirst>
@@ -12,6 +13,7 @@ const PagesRoutes = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/AboutUs" component={AboutUs} />
             </Switch>
+            <Footer />
         </StyledEngineProvider>
     );
 };
