@@ -20,7 +20,7 @@ import { fontSize } from '@mui/system';
 
 
 //import { pink } from '@mui/material/colors';
-const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/aboutUs" }, { label: 'Events', link: "/events" }, { label: 'Contact us', link: "contactUs" }];
+const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/aboutus" }, { label: 'Events', link: "/events" }, { label: 'Contact us', link: "contactUs" }];
 const settings = ['Profile', 'Logout'];
 //const colorpink = pink['600'];
 
@@ -123,7 +123,7 @@ const Navbar = () => {
                             {pages.map((element) => (
                                 console.log(element),
                                 <MenuItem key={element.link} onClick={handleCloseNavMenu}>
-                                    <Typography to={element.link} textAlign="center">{element.label}</Typography>
+                                    <Typography component="a" href={element.link} textAlign="center">{element.label}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -152,7 +152,8 @@ const Navbar = () => {
                         {pages.map((element) => (
                             <Button
                                 key={element.link}
-                                to={element.link}
+                                component="a"
+                                href={element.link}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
