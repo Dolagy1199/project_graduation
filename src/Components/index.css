@@ -1,0 +1,10 @@
+.links {
+    margin-left: 200px;
+    font-weight: bold;
+    font-size: 14px;
+    scroll-padding-inline: 20px;
+    scroll-padding-block-end: 100;
+    font-style:#ffffff;
+    display: "flex" ;
+    
+}

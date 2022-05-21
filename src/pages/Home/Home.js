@@ -50,8 +50,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Home() {
   return (
-    <Container maxWidth="x6" >
-      <div class="container" padding="200px" margin-top="300px" >
+    <Container maxWidth="x6" sx={{marginTop: 10}} >
+      <div class="container" >
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={4}>
