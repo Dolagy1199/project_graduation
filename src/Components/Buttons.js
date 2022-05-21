@@ -32,75 +32,16 @@ class Buttons extends Component {
                 }}>
                     <Grid container spacing={3}>
                         <Grid item xs={4}>
-                            < Card sx={{ maxWidth: 345 }}>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                    image="h.jpg"
-                                    alt="green iguana"
-                                    col
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" color="#BB3B62" fontWeight="bold">
-                                        Cinema
-                                    </Typography>
-                                    <Typography variant="body2" >
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                                        species, ranging across all continents except Antarctica
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">Share</Button>
-                                    <Button size="small">Learn More</Button>
-                                </CardActions>
-                            </Card>
-
+                            <Button className="img2">
+                            </Button>
                         </Grid>
                         <Grid item xs={4}>
-                            < Card sx={{ maxWidth: 345 }}>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                    image="h.jpg"
-                                    alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" color="#BB3B62" fontWeight="bold">
-                                        party
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                                        species, ranging across all continents except Antarctica
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">Share</Button>
-                                    <Button size="small">Learn More</Button>
-                                </CardActions>
-                            </Card>
+                            <Button className="img2">
+                            </Button>
                         </Grid>
                         <Grid item xs={4}>
-                            < Card sx={{ maxWidth: 345 }}>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                    image="h.jpg"
-                                    alt="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" color="#BB3B62" fontWeight="bold">
-                                        train
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                                        species, ranging across all continents except Antarctica
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">Share</Button>
-                                    <Button size="small">Learn More</Button>
-                                </CardActions>
-                            </Card>
+                            <Button className="img2">
+                            </Button>
                         </Grid>
                     </Grid>
                 </Box>

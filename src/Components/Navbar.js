@@ -20,7 +20,7 @@ import { fontSize } from '@mui/system';
 
 
 //import { pink } from '@mui/material/colors';
-const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/aboutus" }, { label: 'Events', link: "/events" }, { label: 'Contact us', link: "contactUs" }];
+const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/AboutUs" }, { label: 'Events', link: "/events" }, { label: 'Contact us', link: "contactUs" }];
 const settings = ['Profile', 'Logout'];
 //const colorpink = pink['600'];
 

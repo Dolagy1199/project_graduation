@@ -7,6 +7,7 @@
     font-style: #ffffff;
     display: "flex";
     color: #fff;
+    border-radius: 20px;
 
 }
 
@@ -15,7 +16,8 @@
     padding-left: 205px;
     border-radius: 100px;
     border-style: calc(20);
-    border-width: 30px
+    border-width: 30px;
+    border-radius: 20px;
 }
 
 .css-1ps4owl-MuiTypography-root-MuiLink-root {
@@ -27,6 +29,7 @@
     scroll-padding-block-start: 20PX;
     padding: 5px;
     margin-left: 150px;
+    border-radius: 20px;
 }
 
 .LastNews {
@@ -34,14 +37,53 @@
     height: 500;
     position: relative;
     padding: 50px;
-    margin:10;
+    margin: 10;
+    border-radius: 20px;
 
 }
 
 .LastNews:hover {
 
     background-color: #c86180;
+}
+
+.team {
+    padding: 50px;
+
+}
+
+.div1 {
+    background-color: #BB3B62;
+    height: 40;
+    position: absolute;
+    padding: 5px;
+    margin-left: 600px;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.img1 {
+    border-radius: 20px;
+    background-image: url("../Assets/h.jpg");
+    height: 350px;
+    padding: 20px;
+    margin: 30px;
 
 
+}
 
+
+.img2 {
+    border-radius: 20px;
+    background-image: url("../Assets/h.jpg");
+    height: 250px;
+    width: 250px;
+    padding: 20px;
+    margin: 30px;
+
+}
+
+
+.img2:hover {
+    background-color: #c86180;
 }
