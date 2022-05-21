@@ -4,7 +4,44 @@
     font-size: 14px;
     scroll-padding-inline: 20px;
     scroll-padding-block-end: 100;
-    font-style:#ffffff;
-    display: "flex" ;
-    
+    font-style: #ffffff;
+    display: "flex";
+    color: #fff;
+
+}
+
+.slider {
+    position: center;
+    padding-left: 205px;
+    border-radius: 100px;
+    border-style: calc(20);
+    border-width: 30px
+}
+
+.css-1ps4owl-MuiTypography-root-MuiLink-root {
+    margin: 0;
+    color: #ffffff;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: rgba(25, 118, 210, 0.4);
+    scroll-padding-block-start: 20PX;
+    padding: 5px;
+    margin-left: 150px;
+}
+
+.LastNews {
+    background-color: #BB3B62;
+    height: 500;
+    position: relative;
+    padding: 50px;
+    margin:10;
+
+}
+
+.LastNews:hover {
+
+    background-color: #c86180;
+
+
+
 }

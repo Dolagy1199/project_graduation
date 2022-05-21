@@ -15,9 +15,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { PostAddOutlined } from '@mui/icons-material';
 import { fontSize } from '@mui/system';
-import Link from '@mui/material/Link';
-import './index.css'
-import { colors } from '@mui/material';
 
 
 
@@ -92,15 +89,9 @@ const Navbar = () => {
                         Logo
                     </Typography>
 
-                    <div className='links'>
-                        <Link href="/" >HOME</Link>
-                        <Link href="/aboutUs">ABOUT US</Link>
-                        <Link href="/events">EVENTS</Link>
-                        <Link href="/contactUs">CONTACT US</Link>
 
-                    </div>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 
-                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -110,8 +101,8 @@ const Navbar = () => {
                             color="inherit"
                         >
                             <MenuIcon />
-                        </IconButton> */}
-                        {/* <Menu
+                        </IconButton>
+                        <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
@@ -126,21 +117,19 @@ const Navbar = () => {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' , marginLeft: 200 },
+                                display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <div sx={{marginLeft: 200}}>
                             {pages.map((element) => (
                                 console.log(element),
-                                <MenuItem key={element.link} onClick={handleCloseNavMenu} >
-                                    <Typography to={element.link} textAlign="center" >{element.label}</Typography>
+                                <MenuItem key={element.link} onClick={handleCloseNavMenu}>
+                                    <Typography to={element.link} textAlign="center">{element.label}</Typography>
                                 </MenuItem>
                             ))}
-                            </div> 
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-                    {/* <Typography
+                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Typography
                         variant="h5"
                         noWrap
                         component="a"
@@ -157,8 +146,9 @@ const Navbar = () => {
                         }}
                     >
                         Logo
-                    </Typography> */}
-                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    </Typography>
+
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((element) => (
                             <Button
                                 key={element.link}
@@ -199,7 +189,7 @@ const Navbar = () => {
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box> */}
+                    </Box>
                 </Toolbar>
             </Container>
         </AppBar>
