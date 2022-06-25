@@ -6,6 +6,8 @@ import Grid from '@mui/material/Grid';
 import Slider from '../Components/Slider'
 import Buttons from '../Components/Buttons';
 import LastNews from '../Components/LastNews';
+import LastEvent from '../Components/LastEvent';
+import Footer from '../Components/Footer';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -20,9 +22,11 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Home() {
   return (
     <div>
-      <Slider/>
-      <Buttons/>
-      <LastNews/>
+      <Slider />
+      <Buttons />
+      <LastNews />
+      <LastEvent />
+
 
     </div>
   );

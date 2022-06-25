@@ -15,7 +15,7 @@ class Footer extends Component {
             
                     <div className="footer" >
                         <Typography color="#ffff" fontWeight="bold" fontSize={40} textAlign="center">
-                            Last News
+                           footer
                         </Typography>
                         <Typography color="#ffff" fontSize={20}>
     

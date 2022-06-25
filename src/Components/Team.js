@@ -28,6 +28,8 @@ const Item = styled(Paper)(({ theme }) => ({
 class Team extends Component {
     render() {
         return (
+
+            /*
             <div className='team'>
                 <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
                     ABOUT US
@@ -85,6 +87,68 @@ class Team extends Component {
                     </Grid>
 
                 </Box>
+
+            </div>
+            */
+
+            <div className='container'>
+
+                <Box sx={{
+                    padding: 7,
+                    marginRight: 30,
+                    textAlign: 'center',
+                    marginLeft: 30,
+                }}></Box>
+
+                <Grid container spacing={1}>
+                    <Grid item xs={12}>
+                        <div className="img3">
+                        </div>
+                        <div className='info'>
+                            <Typography fontSize={32} gutterBottom variant="h1" component="div" fontWeight={700} className='name'>
+                                Dolagy Baky Farhid
+
+                            </Typography>
+                            <Typography fontSize={14} gutterBottom variant="h6" className='details' >
+                                “ if you equip people with me right
+                                tools . i will build the most
+                                exptraordinary things”
+                            </Typography>
+
+                        </div>
+                        <div className="team_details">
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                22 Years
+
+                            </Typography>
+                            <Typography fontSize={24} fontWeight={400}  className="Typography">
+                                dolagydolagy1199@gmail.com
+
+                            </Typography>
+                            <Typography fontSize={24} fontWeight={400}  className="Typography">
+                                01282677208
+
+                            </Typography>
+                            <Typography fontSize={24} fontWeight={400}  className="Typography">
+                                Female
+
+                            </Typography>
+                            <Typography fontSize={24} fontWeight={400}  className="Typography">
+                                30009092602283
+
+                            </Typography>
+                            <Typography fontSize={24} fontWeight={400}  className="Typography">
+                                Partner
+
+                            </Typography>
+                            <Typography fontSize={24} fontWeight={400}  className="Typography">
+                                Tickets
+
+                            </Typography>
+                        </div>
+                    </Grid>
+                </Grid>
+
 
             </div>
         );

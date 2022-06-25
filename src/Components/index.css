@@ -37,7 +37,7 @@
     height: 500;
     position: relative;
     padding: 50px;
-    margin: 10;
+    margin: 10 auto;
     border-radius: 20px;
 
 }
@@ -74,25 +74,90 @@
 
 
 .img2 {
-    border-radius: 20px;
+    border-radius: 50;
     background-image: url("../Assets/h.jpg");
     height: 250px;
     width: 350px;
     padding: -2px;
     margin: 15px;
 
+}
 
 
+
+
+.img3 {
+    border-radius: 200px;
+    background-image: url("../Assets/h.jpg");
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #BB3B62;
+
+
+}
+
+.info {
+    text-align: center;
+}
+
+.details {
+    width: 260px;
+    margin: 0 auto 92px
+}
+
+.name {
+    margin: 23px 0 31px;
 }
 
 
 .img2:hover {
     background-color: #c86180;
 }
-.footer{
+
+.footer {
     background-color: #BB3B62;
     height: 350px;
-    
- padding-top:50px;
- margin-top: 30px;
+
+    padding-top: 50px;
+    margin-top: 30px;
+}
+
+.Typography {
+    margin: 15px 0;
+}
+
+.divbutton {
+    background: rgba(229, 229, 229, 0.58);
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 236px;
+    height: 259px;
+
+}
+
+.img8 {
+    width: 197px;
+    height: 155px;
+}
+
+.img7 {
+    background-image: url("../Assets/h.jpg");
+    height: 400px;
+    border-radius: 25px;
+}
+
+.divlastevent {
+    margin: 30px auto;
+    width: 1152px;
+    height: 400px;
+    background: rgba(229, 229, 229, 0.58);
+    border-radius: 31px;
 }

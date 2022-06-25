@@ -8,6 +8,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Img from '../Assets/h.jpg'
+import { Link } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 
@@ -31,21 +33,55 @@ class Buttons extends Component {
                     marginLeft: -7,
                 }}>
                     <Grid container spacing={3}>
-                        <Grid item xs={4}>
-                            <Button className="img2">
-                            </Button>
+                        <Grid item xs={3}>
+                            <div className="divbutton">
+                                <div className="img8 img1">
+                                </div>
+                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
+                                    href="#"   underline="none" >
+                                    PARTY
+                                </Link>
+                            </div>
+
                         </Grid>
-                        <Grid item xs={4}>
-                            <Button className="img2">
-                            </Button>
+                        <Grid item xs={3}>
+                            <div className="divbutton">
+                                <div className="img8 img1">
+                                </div>
+                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
+                                    href="#"   underline="none" >
+                                    PARTY
+                                </Link>
+                            </div>
+
                         </Grid>
-                        <Grid item xs={4}>
-                            <Button className="img2">
-                            </Button>
+                        <Grid item xs={3}>
+                            <div className="divbutton">
+                                <div className="img8 img1">
+                                </div>
+                               <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
+                                    href="#"   underline="none" >
+                                    PARTY
+                                </Link>
+                            </div>
+
+                        </Grid>
+                        <Grid item xs={3}>
+                            <div className="divbutton">
+                                <div className="img8 img1">
+                                </div>
+                               <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
+                                    href="#"   underline="none" >
+                                    PARTY
+                                </Link>
+                                     </div>
+
                         </Grid>
                     </Grid>
                 </Box>
             </div >
+
+            
         );
     }
 }
