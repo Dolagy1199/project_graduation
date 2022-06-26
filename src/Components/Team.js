@@ -9,6 +9,18 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import CallIcon from '@mui/icons-material/Call';
+import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import PersonIcon from '@mui/icons-material/Person';
+import FeaturedVideoIcon from '@mui/icons-material/FeaturedVideo';
+import BookOnlineIcon from '@mui/icons-material/BookOnline';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+
+
+
+
 
 
 import { styled } from '@mui/material/styles';
@@ -91,7 +103,7 @@ class Team extends Component {
             </div>
             */
 
-            <div className='container'>
+            <div className='divprofile'>
 
                 <Box sx={{
                     padding: 7,
@@ -118,31 +130,32 @@ class Team extends Component {
                         </div>
                         <div className="team_details">
                             <Typography fontSize={24} fontWeight={400} className="Typography">
-                                22 Years
+                                <PersonIcon className='icon1' /> 22 Years
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400}  className="Typography">
-                                dolagydolagy1199@gmail.com
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                <LocalPostOfficeIcon className='icon1' /> dolagydolagy1199@gmail.com
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400}  className="Typography">
-                                01282677208
+
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                <CallIcon className='icon1' />   01282677208
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400}  className="Typography">
-                                Female
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                <AccountCircleIcon className='icon1' /> Female
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400}  className="Typography">
-                                30009092602283
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                <FeaturedVideoIcon className='icon1' />   30009092602283
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400}  className="Typography">
-                                Partner
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                <HandshakeIcon className='icon1' /> Partner
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400}  className="Typography">
-                                Tickets
+                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                                <BookOnlineIcon className='icon1' />   Tickets
 
                             </Typography>
                         </div>

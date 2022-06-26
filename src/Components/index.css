@@ -89,21 +89,26 @@
 .img3 {
     border-radius: 200px;
     background-image: url("../Assets/h.jpg");
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 30;
+    padding: 10 0;
     border-width: 5px;
     border-style: solid;
     border-color: #BB3B62;
+    padding-right: 70px;
 
 
 }
 
 .info {
     text-align: center;
+    padding-right: 70px;
+
+
+
 }
 
 .details {
@@ -160,4 +165,31 @@
     height: 400px;
     background: rgba(229, 229, 229, 0.58);
     border-radius: 31px;
+}
+
+.icon1 {
+    font-size: 45px;
+    color: #BB3B62;
+    margin: 15px
+}
+
+
+.divprofile {
+    margin-top: 50px;
+    margin-left: 270px;
+    width: 1000px;
+    height: 1250px;
+    border-radius: 25px;
+    background-color: #e3d5d5;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px;
+    box-shadow: #BB3B62;
+    shape-rendering: crispEdges;
+}
+
+.team_details {
+    padding-left: 70px;
 }
