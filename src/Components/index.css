@@ -127,11 +127,13 @@
 
 .footer {
     background-color: #BB3B62;
-    height: 350px;
+    height: 310px;
 
     padding-top: 50px;
     margin-top: 30px;
 }
+
+
 
 .Typography {
     margin: 15px 0;
@@ -192,4 +194,87 @@
 
 .team_details {
     padding-left: 70px;
+}
+
+.copy {
+    margin-left: 400px;
+}
+
+.img88 {
+    background-image: url("../Assets/h.jpg");
+
+    height: 400px;
+    width: 900px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+
+}
+
+.addeventbutton {
+    margin: auto;
+    padding: auto;
+    display: block;
+}
+
+.addevent {
+    margin-left: 12%;
+    width: 130px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #bb3b62;
+
+}
+
+.AddEvent {
+    color: black;
+}
+
+.divinput {
+    margin-top: 100px;
+}
+
+.inputt {
+    width: 900px;
+    height: 50px;
+    margin-left: 20%;
+    display: flex;
+    color: #bb3b62;
+    background-color: #f1efef;
+    font-size: larger;
+    margin-bottom: 30px;
+}
+
+.inputt:hover {
+    color: #bb3b62;
+    background-color: #f1efef;
+
+}
+
+.labelevent {
+    font-size: larger;
+    color: #BB3B62;
+    margin-left: 20%;
+    font-weight: bold;
+
+}
+
+.inputt2 {
+    width: 900px;
+    height: 50px;
+    margin-left: 20%;
+    display: flex;
+    color: #bb3b62;
+    background-color: #f1efef;
+    font-size: larger;
+    margin-bottom: 30px;
+    padding-top: 7px;
+}
+
+.addevent2 {
+    margin-left: 45%;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #bb3b62;
+    margin-top: 30px;
 }
