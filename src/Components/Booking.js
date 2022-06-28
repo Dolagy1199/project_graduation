@@ -86,7 +86,7 @@ class Events extends Component {
                                 display: "flex",
                                 justifyContent: "center"
                             }}  >
-                                Event Discreption :  <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{marginLeft: "6px"}} >
+                                Event Discreption :  <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }} >
                                     Show Events
                                 </Typography>
                             </Typography>
@@ -95,7 +95,7 @@ class Events extends Component {
                                 display: "flex",
                                 justifyContent: "center"
                             }}   >
-                                Departement : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{marginLeft: "6px"}}>
+                                Departement : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }}>
                                     Show Events
                                 </Typography>
                             </Typography>
@@ -104,7 +104,7 @@ class Events extends Component {
                                 display: "flex",
                                 justifyContent: "center"
                             }}   >
-                                Presenter : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{marginLeft: "6px"}}>
+                                Presenter : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }}>
                                     Show Events
                                 </Typography>
                             </Typography>
@@ -113,7 +113,7 @@ class Events extends Component {
                                 display: "flex",
                                 justifyContent: "center"
                             }}   >
-                                Start Date : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{marginLeft: "6px"}} >
+                                Start Date : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }} >
                                     Show Events
                                 </Typography>
                             </Typography>
@@ -122,7 +122,7 @@ class Events extends Component {
                                 display: "flex",
                                 justifyContent: "center"
                             }}   >
-                                End Date : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{marginLeft: "6px"}}>
+                                End Date : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }}>
                                     Show Events
                                 </Typography>
                             </Typography>

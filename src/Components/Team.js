@@ -43,46 +43,97 @@ class Team extends Component {
                     marginLeft: 10,
                 }}>
                     <Grid container spacing={1}>
-                        <Grid item xs={4}>
+                        <Grid item xs={6}>
+
+
+                            <Typography fontSize={32} gutterBottom variant="h1" component="div" sx={{ marginTop: "50px" }}>
+                                The company is aimed at supplying entertainment houses, venue owners, event organizers and planners,
+                                with an easy and feasible solution to sell and market their tickets/invitations. The services provided do not end there; TicketsMarche also provides consultation and
+                                fraud protection as well as spectator entry monitoring and surveillance
+
+                            </Typography>
+
+                        </Grid>
+                        <Grid item xs={6}>
                             <div className="img1">
                             </div>
 
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
                         </Grid>
-                        <Grid item xs={4}>
-                            <div className="img1">
-                            </div>
 
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <div className="img1">
-                            </div>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                        </Grid>
                     </Grid>
 
                 </Box>
 
+                <div className='team'>
+                    <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
+                        OUR TEAM
+                    </Typography>
+
+                    <div className="div2">
+                    </div>
+
+                    <Box sx={{
+                        padding: 7,
+                        marginRight: 10,
+                        textAlign: 'center',
+                        marginLeft: 10,
+                    }}>
+                        <Grid container spacing={1}>
+                            <Grid item xs={4}
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}>
+                                <div className="img00">
+                                </div>
+
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    Dolagy Baky Farhid
+
+                                </Typography>
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    Software Developer
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={4}
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                }}>
+                                <div className="img00">
+                                </div>
+
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    Dolagy Baky Farhid
+
+                                </Typography>
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    Software Developer
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={4}
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                }}>
+                                <div className="img00">
+                                </div>
+
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    Dolagy Baky Farhid
+
+                                </Typography>
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    Software Developer
+                                </Typography>
+                            </Grid>
+                        </Grid>
+
+                    </Box>
+                </div>
             </div>
         );
     }

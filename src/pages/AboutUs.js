@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import Team from '../Components/Team';
 import Slider from '../Components/Slider'
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -16,7 +17,8 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function AboutUs() {
     return (
         <div>
-            we are booking company to book ticjet
+            <Team />
+
 
 
         </div>
