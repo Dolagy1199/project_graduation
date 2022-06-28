@@ -137,8 +137,8 @@ class AddEvent extends Component {
                         />
 
 
-                        <div className="addeventbutton">
-                            <ColorButton variant="contained" className="addevent2" >Submit</ColorButton>
+                        <div >
+                            <ColorButton variant="contained" className="addevent3" >Submit</ColorButton>
                         </div>
 
 

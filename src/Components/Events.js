@@ -74,7 +74,7 @@ class Events extends Component {
                 </div>
 
 
-                <div className="addeventbutton">
+                <div className="addeventbutton555">
                     <ColorButton variant="contained" className="addevent" component={Link} to='/AddEvent'>ADD EVENT</ColorButton>
                 </div>
                 <Box sx={{
