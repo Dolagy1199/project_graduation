@@ -21,6 +21,7 @@ import Stack from '@mui/material/Stack';
 import { pink } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 import Ticket from './Ticket';
+import Drop from '../Components/dropDown2'
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -135,12 +136,63 @@ class AddEvent extends Component {
                             className='inputt'
 
                         />
+                        <label className='labelevent2'> Hall Name </label>
+                        <Drop className='drop' />
 
+                        <Typography className='labelevent'> Available seat  </Typography>
+                        <Input
+                            size="lg"
+                            placeholder="Number of seat class a"
+                            type="number"
+                            aria-label='Frist'
+                            className='inputt'
+
+                        />
+                        <Input
+                            size="lg"
+                            placeholder="Number of seat class B"
+                            type="number"
+                            aria-label='Frist'
+                            className='inputt'
+
+                        />
+                        <Input
+                            size="lg"
+                            placeholder="Number of seat class C"
+                            type="number"
+                            aria-label='Frist'
+                            className='inputt'
+
+                        />
+                        <Typography className='labelevent'> Cost  </Typography>
+                        <Input
+                            size="lg"
+                            placeholder="Cost class a"
+                            type="number"
+                            aria-label='Frist'
+                            className='inputt'
+
+                        />
+                        <Input
+                            size="lg"
+                            placeholder="Cost class B"
+                            type="number"
+                            aria-label='Frist'
+                            className='inputt'
+
+                        />
+                        <Input
+                            size="lg"
+                            placeholder="Cost class a C "
+                            type="number"
+                            aria-label='Frist'
+                            className='inputt'
+
+                        />
 
                         <div >
                             <ColorButton variant="contained" className="addevent3" >Submit</ColorButton>
                         </div>
-
 
 
                     </Box>

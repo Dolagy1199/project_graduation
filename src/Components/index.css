@@ -349,3 +349,18 @@
     border-radius: 20px;
 
 }
+
+.drop {
+
+    margin-left: 50%;
+
+
+}
+
+.labelevent2 {
+    font-size: larger;
+    color: #BB3B62;
+    margin-left: 20%;
+    font-weight: bold;
+    margin-top: 10px;
+}
