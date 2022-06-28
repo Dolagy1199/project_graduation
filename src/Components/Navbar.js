@@ -20,8 +20,8 @@ import { fontSize } from '@mui/system';
 
 
 //import { pink } from '@mui/material/colors';
-const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/AboutUs" }, { label: 'Events', link: "/events" }, { label: 'Contact us', link: "contactUs" }];
-const settings = ['Profile', 'Logout'];
+const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/AboutUs" }, { label: 'Events', link: "/events" }];
+const settings = [{ label: 'Profile', link: "/profile" }, { label: 'Logout', link: "/logout" }];
 //const colorpink = pink['600'];
 
 const theme = createTheme({
@@ -187,14 +187,21 @@ const Navbar = () => {
                         >
                             {settings.map((setting) => (
                                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
+                                    <a
+                                        href={setting.link}
+                                        underline="none">
+                                        <Typography
+                                            to={setting.link}
+                                            textAlign="center"
+                                        >{setting.label}</Typography>
+                                    </a>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                 </Toolbar>
             </Container>
-        </AppBar>
+        </AppBar >
     );
 };
 export default Navbar;

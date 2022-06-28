@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import Team from '../Components/Team';
+import Team from './Profile';
 import Paper from '@mui/material/Paper';
 import Events from '../Components/Events'
 
