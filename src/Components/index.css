@@ -136,7 +136,7 @@
 
 .footer {
     background-color: #BB3B62;
-    height: 310px;
+    height: 300px;
 
     padding-top: 50px;
     margin-top: 30px;
@@ -353,7 +353,7 @@
 .drop {
 
     margin-left: 50%;
-
+    justify-content: "center";
 
 }
 
@@ -363,4 +363,7 @@
     margin-left: 20%;
     font-weight: bold;
     margin-top: 10px;
+}
+.icon{
+    padding:auto;
 }

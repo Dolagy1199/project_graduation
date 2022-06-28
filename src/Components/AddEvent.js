@@ -139,7 +139,7 @@ class AddEvent extends Component {
                         <label className='labelevent2'> Hall Name </label>
                         <Drop className='drop' />
 
-                        <Typography className='labelevent'> Available seat  </Typography>
+                        <Typography className='labelevent' sx={{marginTop:"20px"}}> Available seat  </Typography>
                         <Input
                             size="lg"
                             placeholder="Number of seat class a"

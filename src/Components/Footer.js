@@ -5,6 +5,11 @@ import './index.css';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Link } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 class Footer extends Component {
     render() {
@@ -16,9 +21,6 @@ class Footer extends Component {
 
 
             <div className="footer" >
-                <Typography color="#ffff" fontWeight="bold" fontSize={40} textAlign="center">
-                    footer
-                </Typography>
 
                 <Box sx={{
                     padding: 7,
@@ -28,14 +30,46 @@ class Footer extends Component {
                 }}>
                     <Grid container spacing={1}>
                         <Grid item xs={4}>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" color={"#ffffff"}  >
-                                Get to Know Us
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                color: "white",
+                             
 
+                            }}  >
+                            
+                                Address  : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }} >
+                                    Sohag -Elbalyana
+                                </Typography>
                             </Typography>
-                            <Link fontSize={20} gutterBottom color={"#ffffff"} fontWeight={400}
-                                href="#" underline="none" >
-                                About Us
-                            </Link>
+
+
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                color: "white",
+
+                            }}  >
+                                Phone : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }} >
+                                    01282677208
+                                </Typography>
+                            </Typography>
+
+
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                color: "white",
+                                alignItems:"left"
+
+                            }}  >
+                                Emaile  : <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px" }} >
+                                    dolagydolagy1199@gmail.com
+                                </Typography>
+                            </Typography>
+
+
+
                         </Grid>
                         <Grid item xs={4}>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" color={"#ffffff"}  >
@@ -43,16 +77,21 @@ class Footer extends Component {
                             </Typography>
                             <Link fontSize={20} gutterBottom color={"#ffffff"} fontWeight={400}
                                 href="#" underline="none" >
-                                About Us
+                                Event
                             </Link>
                         </Grid>
                         <Grid item xs={4}>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" color={"#ffffff"}  >
-                                Shop with Us
+                                Contact Us
                             </Typography>
                             <Link fontSize={20} gutterBottom color={"#ffffff"} fontWeight={400}
                                 href="#" underline="none" >
-                                About Us
+                                    <div className='icon'>
+                                <FacebookIcon />
+                                <WhatsAppIcon />
+                                < InstagramIcon />
+                                <TwitterIcon/>
+                                </div>
                             </Link>
 
                         </Grid>
