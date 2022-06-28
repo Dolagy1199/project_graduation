@@ -29,8 +29,126 @@ class Events extends Component {
                 <div className="div1">
                 </div>
 
+
+                <div className="Ticket">
+
+
+                    <Box sx={{
+                        textAlign: 'center',
+                    }}>
+                        <Grid container spacing={1} sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginTop: "30px",
+                        }}>
+                            <Grid item >
+                                <div className='img5'></div>
+                            </Grid>
+
+                            <Grid item xs={6}>
+
+                                <Typography fontSize={23} fontWeight="bold">DOLAGY BAKY FARHID</Typography>
+                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    color: "#bb3b62",
+                                    marginTop: "20px",
+                                    alignItems: "baseline",
+                                }}  >
+                                    Location :   <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                        Dolagy Baky Farhid
+                                    </Typography>
+                                </Typography>
+
+
+
+                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    color: "#bb3b62",
+                                    marginTop: "20px",
+                                    alignItems: "baseline",
+                                }}  >
+                                    Presenter :   <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                        Dolagy Baky Farhid
+                                    </Typography>
+                                </Typography>
+
+
+                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    color: "#bb3b62",
+                                    marginTop: "20px",
+                                    alignItems: "baseline",
+                                }}  >
+                                    From  :
+                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                        10:30 PM 09 sep 2022
+                                    </Typography>
+                                </Typography>
+
+
+
+                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    color: "#bb3b62",
+                                    marginTop: "20px",
+                                    alignItems: "baseline",
+                                }}  >
+                                    To:
+                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                        10:30 PM 09 sep 2022
+                                    </Typography>
+                                </Typography>
+
+                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    color: "#bb3b62",
+                                    marginTop: "20px",
+                                    alignItems: "baseline",
+                                }}  >
+                                    Seat Number  :
+
+                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                        50
+                                    </Typography>
+                                </Typography>
+
+                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    color: "#bb3b62",
+                                    marginTop: "20px",
+                                    alignItems: "baseline",
+                                }}  >
+                                    Cost :
+
+                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                        100
+                                    </Typography>
+                                </Typography>
+
+
+
+                            </Grid>
+                        </Grid>
+                    </Box>
+
+
+
+                </div>
+
+
             </div>
+
+
+
         );
     }
 }
 export default Events;
+

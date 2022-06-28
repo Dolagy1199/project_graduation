@@ -85,8 +85,11 @@ class Events extends Component {
                 }}>
                     <Grid container spacing={1}>
                         <Grid item xs={6}>
-                            <div className="img1">
-                            </div>
+
+
+                            <Typography component={Link} to="/Booking">
+                                <div className='img1'></div>
+                            </Typography>
 
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
                                 Name :Dolagy Baky Farhid
@@ -103,27 +106,9 @@ class Events extends Component {
                             </Typography>
                         </Grid>
                         <Grid item xs={6}>
-                            <div className="img1">
-                            </div>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
+                            <Typography component={Link} to="/Booking">
+                                <div className='img1'></div>
                             </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-
-                        </Grid>
-                        <Grid item xs={6}>
-                            <div className="img1">
-                            </div>
 
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
                                 Name :Dolagy Baky Farhid
@@ -141,8 +126,30 @@ class Events extends Component {
 
                         </Grid>
                         <Grid item xs={6}>
-                            <div className="img1">
-                            </div>
+                            <Typography component={Link} to="/Booking">
+                                <div className='img1'></div>
+                            </Typography>
+
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                Name :Dolagy Baky Farhid
+
+                            </Typography>
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                Software Developer
+                            </Typography>
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                Software Developer
+                            </Typography>
+                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                Software Developer
+                            </Typography>
+
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Typography component={Link} to="/Booking">
+                                <div className='img1'></div>
+                            </Typography>
+
 
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
                                 Name :Dolagy Baky Farhid

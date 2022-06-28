@@ -8,6 +8,8 @@ import Footer from "../Components/Footer"
 import Profiler from "./Profile";
 import AddEvent from '../Components/AddEvent'
 import Ticket from '../Components/Ticket';
+import Booking from '../Components/Booking';
+
 const PagesRoutes = () => {
     return (
         <StyledEngineProvider injectFirst>
@@ -19,6 +21,8 @@ const PagesRoutes = () => {
                 <Route exact path="/profile" component={Profiler} />
                 <Route exact path="/AddEvent" component={AddEvent} />
                 <Route exact path="/Ticket" component={Ticket} />
+                <Route exact path="/Booking" component={Booking} />
+
 
 
 
