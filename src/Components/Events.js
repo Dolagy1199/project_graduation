@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
-
 import './index.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import AddEvent from './AddEvent'
-import Img from '../Assets/h.jpg'
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import Stack from '@mui/material/Stack';
 import { pink } from '@mui/material/colors';
-import { Link } from 'react-router-dom';
+import { Link } from '@mui/material';
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -75,7 +67,7 @@ class Events extends Component {
 
 
                 <div className="addeventbutton555">
-                    <ColorButton variant="contained" className="addevent" component={Link} to='/AddEvent'>ADD EVENT</ColorButton>
+                    <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
                 </div>
                 <Box sx={{
                     padding: 7,
@@ -86,8 +78,7 @@ class Events extends Component {
                     <Grid container spacing={1}>
                         <Grid item xs={6}>
 
-
-                            <Typography component={Link} to="/Booking">
+                            <Typography component={Link} color="black" underline="none" href="/Booking">
                                 <div className='img1'></div>
                             </Typography>
 
@@ -96,17 +87,15 @@ class Events extends Component {
 
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                From : 12/12/2022 07:12 AM
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                To :   12/12/2022 09:30 AM
                             </Typography>
                         </Grid>
                         <Grid item xs={6}>
-                            <Typography component={Link} to="/Booking">
+
+                            <Typography component={Link} color="black" underline="none" href="/Booking">
                                 <div className='img1'></div>
                             </Typography>
 
@@ -115,18 +104,15 @@ class Events extends Component {
 
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                From : 12/12/2022 07:12 AM
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                To :   12/12/2022 09:30 AM
                             </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-
                         </Grid>
                         <Grid item xs={6}>
-                            <Typography component={Link} to="/Booking">
+
+                            <Typography component={Link} color="black" underline="none" href="/Booking">
                                 <div className='img1'></div>
                             </Typography>
 
@@ -135,39 +121,31 @@ class Events extends Component {
 
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                From : 12/12/2022 07:12 AM
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                To :   12/12/2022 09:30 AM
                             </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-
                         </Grid>
+
                         <Grid item xs={6}>
-                            <Typography component={Link} to="/Booking">
+
+                            <Typography component={Link} color="black" underline="none" href="/Booking">
                                 <div className='img1'></div>
                             </Typography>
-
 
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
                                 Name :Dolagy Baky Farhid
 
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                From : 12/12/2022 07:12 AM
                             </Typography>
                             <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
+                                To :   12/12/2022 09:30 AM
                             </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-
                         </Grid>
                     </Grid>
-
                 </Box>
 
             </div>

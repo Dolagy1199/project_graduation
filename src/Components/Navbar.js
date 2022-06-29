@@ -7,22 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { PostAddOutlined } from '@mui/icons-material';
-import { fontSize } from '@mui/system';
+import Cookies from "js-cookie";
+import { useHistory } from "react-router";
 
 
 
-
-//import { pink } from '@mui/material/colors';
 const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/AboutUs" }, { label: 'Events', link: "/events" }];
-const settings = [{ label: 'Profile', link: "/profile" }, { label: 'Logout', link: "/logout" }];
-//const colorpink = pink['600'];
 
 const theme = createTheme({
 
@@ -47,8 +41,8 @@ const theme = createTheme({
 
 });
 
-const Navbar = () => {
-
+const Navbar = ({ isUser }) => {
+    const history = useHistory();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -122,7 +116,6 @@ const Navbar = () => {
                             }}
                         >
                             {pages.map((element) => (
-                                console.log(element),
                                 <MenuItem key={element.link} onClick={handleCloseNavMenu}>
                                     <Typography component="a" href={element.link} textAlign="center">{element.label}</Typography>
                                 </MenuItem>
@@ -162,42 +155,36 @@ const Navbar = () => {
                             </Button>
                         ))}
                     </Box>
-
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <a
-                                        href={setting.link}
-                                        underline="none">
-                                        <Typography
-                                            to={setting.link}
-                                            textAlign="center"
-                                        >{setting.label}</Typography>
-                                    </a>
+                        {isUser ?
+                            <>
+                                <MenuItem key={"Profile"} onClick={handleCloseNavMenu}>
+                                    <Typography component="a" href={"/Profile"} textAlign="center">Profile</Typography>
                                 </MenuItem>
-                            ))}
-                        </Menu>
+                                <MenuItem key={"logeOut"} onClick={handleCloseNavMenu}>
+                                    <Typography
+                                        component={Button}
+                                        onClick={() => {
+                                            Cookies.remove(process.env.REACT_APP_TOKEN_NAME);
+                                            history.push('/');
+                                            window.location.reload()
+                                        }}>Loge out</Typography>
+                                </MenuItem>
+                            </>
+                            :
+                            <>
+                                <MenuItem key={"logein"} onClick={handleCloseNavMenu}>
+                                    <Typography component="a" href={"/logein"} textAlign="center">loge in</Typography>
+                                </MenuItem>
+                                <MenuItem key={"singup"} onClick={handleCloseNavMenu}>
+                                    <Typography
+                                        component="a"
+                                        href={"/signup"}
+                                    >sign up</Typography>
+                                </MenuItem>
+                            </>
+                        }
+
                     </Box>
                 </Toolbar>
             </Container>

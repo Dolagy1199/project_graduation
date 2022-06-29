@@ -135,15 +135,12 @@ class Events extends Component {
                                 Available seat :
                                 <DropdownList />
                             </Typography>
-
                         </Grid>
-
-
                     </Grid>
 
                 </Box>
                 <div className="addeventbutton">
-                    <ColorButton variant="contained" className="BOOKNOW" component={Link} to="/Ticket" >BOOK NOW </ColorButton>
+                    <ColorButton variant="contained" className="BOOKNOW" href="/Ticket" >BOOK NOW </ColorButton>
                 </div>
 
             </div>

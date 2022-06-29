@@ -5,12 +5,9 @@ import Home from './Home'
 import AboutUs from "./AboutUs"
 import Events from "./Events"
 import Footer from "../Components/Footer"
-import Profiler from "./Profile";
-import AddEvent from '../Components/AddEvent'
-import Ticket from '../Components/Ticket';
+import Logein from "./logein";
 import Booking from '../Components/Booking';
-
-const PagesRoutes = () => {
+const GuestRoute = () => {
     return (
         <StyledEngineProvider injectFirst>
             <PersistentDrawerRight />
@@ -18,20 +15,13 @@ const PagesRoutes = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/AboutUs" component={AboutUs} />
                 <Route exact path="/events" component={Events} />
-                <Route exact path="/profile" component={Profiler} />
-                <Route exact path="/AddEvent" component={AddEvent} />
-                <Route exact path="/Ticket" component={Ticket} />
+                <Route exact path="/Ticket" component={Logein} />
                 <Route exact path="/Booking" component={Booking} />
-
-
-
-
-
-
+                <Route exact path="/logein" component={Logein} />
             </Switch>
             <Footer />
         </StyledEngineProvider>
     );
 };
 
-export default PagesRoutes;
+export default GuestRoute;
