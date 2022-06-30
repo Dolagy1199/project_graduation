@@ -11,18 +11,32 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
-
+import { authorizedAPIs } from "../API/axiosSetup";
+import Cookies from "js-cookie";
 
 const theme = createTheme();
 
-export default function Logein({ handelSubmit }) {
-    const handleSubmit = (event) => {
+export default function Logein() {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const email = data.get('email');
         const password = data.get('password')
-        handelSubmit({ email, password });
-        
+        let submissionInfo = {
+            email,
+            password
+        }
+        await authorizedAPIs
+            .post(
+                "/authintication/login", submissionInfo
+            )
+            .then((res) => {
+                Cookies.set(process.env.REACT_APP_TOKEN_NAME, res.data.token);
+                document.location.reload()
+            })
+            .catch((error) => {
+            });
+
     };
 
     return (

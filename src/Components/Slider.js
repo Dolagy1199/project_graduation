@@ -20,16 +20,16 @@ class Slider extends Component {
         return (
             <div className='slider'>
                 <SimpleImageSlider
-                    style={{ marginTop: "50px" }}
-                    width={1090}
-                    height={350}
+                    style={{ marginTop: "2%" }}
+                    width={"80%"}
+                    height={"400px"}
                     images={images}
                     showBullets={true}
                     showNavs={true}
                     useGPURender={true}
                     navStyle={1}
                     slideDuration={.5}
-                    background-size={300}
+                    background-size={"100%"}
                     borderRadius={"50%"}
                 />
 

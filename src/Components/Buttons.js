@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import './index.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Img from '../Assets/h.jpg'
 import { Link } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
@@ -35,53 +28,52 @@ class Buttons extends Component {
                     <Grid container spacing={3}>
                         <Grid item xs={3}>
                             <div className="divbutton">
-                                <div className="img8 img1">
+                                <div className="img8 cinema">
                                 </div>
-                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
-                                    href="#"   underline="none" >
-                                    PARTY
+                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700}
+                                    href="/event/cinema" underline="none" >
+                                    Cinema
                                 </Link>
                             </div>
 
                         </Grid>
                         <Grid item xs={3}>
                             <div className="divbutton">
-                                <div className="img8 img1">
+                                <div className="img8 Threater">
                                 </div>
-                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
-                                    href="#"   underline="none" >
-                                    PARTY
+                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700}
+                                    href="/event/threate" underline="none" >
+                                    Threater
                                 </Link>
                             </div>
 
                         </Grid>
                         <Grid item xs={3}>
                             <div className="divbutton">
-                                <div className="img8 img1">
+                                <div className="img8 concert">
                                 </div>
-                               <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
-                                    href="#"   underline="none" >
-                                    PARTY
+                                <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700}
+                                    href="/event/concerts" underline="none" >
+                                    Concerts
                                 </Link>
                             </div>
 
                         </Grid>
                         <Grid item xs={3}>
                             <div className="divbutton">
-                                <div className="img8 img1">
+                                <div className="img8 standupcomedy">
                                 </div>
-                               <Link fontSize={32} gutterBottom color={"#BB3B62"} fontWeight={700} 
-                                    href="#"   underline="none" >
-                                    PARTY
+                                <Link fontSize={30} gutterBottom color={"#BB3B62"} fontWeight={700}
+                                    href="/event/standup-comedy" underline="none" >
+                                    standup comedy
                                 </Link>
-                                     </div>
-
+                            </div>
                         </Grid>
                     </Grid>
                 </Box>
             </div >
 
-            
+
         );
     }
 }

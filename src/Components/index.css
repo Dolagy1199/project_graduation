@@ -218,7 +218,34 @@
     border-radius: 25px;
 
 }
+.cinema {
+    background-image: url("../Assets/cinema.jpg");
+    background-size: cover;
+    margin-bottom: 50px;
+    border-radius: 25px;
 
+}
+.Threater {
+    background-image: url("../Assets/stage.jpeg");
+    background-size: cover;
+    margin-bottom: 50px;
+    border-radius: 25px;
+
+}
+.concert {
+    background-image: url("../Assets/concert-stage.jpg");
+    background-size: cover;
+    margin-bottom: 50px;
+    border-radius: 25px;
+
+}
+.standupcomedy {
+    background-image: url("../Assets/standupcomedy.jpg");
+    background-size: cover;
+    margin-bottom: 50px;
+    border-radius: 25px;
+
+}
 .addeventbutton {
     display: flex;
     justify-content: center
@@ -233,6 +260,13 @@
 
 }
 
+
+.ourBook{
+    background-image: url("../Assets/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .AddEvent {
     color: black;
 }
@@ -249,7 +283,7 @@
     color: #bb3b62;
     background-color: #f1efef;
     font-size: larger;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
 }
 
 .inputt:hover {
@@ -274,8 +308,7 @@
     color: #bb3b62;
     background-color: #f1efef;
     font-size: larger;
-    margin-bottom: 30px;
-    padding-top: 7px;
+    margin-bottom: 5%;
 }
 
 .addevent2 {

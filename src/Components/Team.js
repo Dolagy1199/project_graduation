@@ -3,12 +3,6 @@ import Typography from '@mui/material/Typography';
 import './index.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Img from '../Assets/h.jpg'
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 
 
 import { styled } from '@mui/material/styles';
@@ -55,7 +49,7 @@ class Team extends Component {
 
                         </Grid>
                         <Grid item xs={6}>
-                            <div className="img1">
+                            <div className="img1 ourBook">
                             </div>
 
                         </Grid>

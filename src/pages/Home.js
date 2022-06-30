@@ -26,8 +26,6 @@ export default function Home() {
       <Buttons />
       <LastNews />
       <LastEvent />
-
-
     </div>
   );
 }
