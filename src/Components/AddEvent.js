@@ -258,7 +258,6 @@ export default function AddEvent() {
                                 className='inputt'
                                 placeholder="Cost class a"
                                 type="number"
-                                className='inputt'
 
                             />
                             <TextField
@@ -276,7 +275,6 @@ export default function AddEvent() {
                                 className='inputt'
                                 placeholder="Cost class b"
                                 type="number"
-                                className='inputt'
 
                             />
                             <TextField
@@ -294,7 +292,6 @@ export default function AddEvent() {
                                 className='inputt'
                                 placeholder="Cost class c"
                                 type="number"
-                                className='inputt'
                             />
 
                             <div >
