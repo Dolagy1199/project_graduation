@@ -14,6 +14,13 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
+const ColorButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.getContrastText(pink[700]),
+    backgroundColor: pink[700],
+    '&:hover': {
+        backgroundColor: pink[700],
+    },
+}));
 
 export default function AddEvent() {
     const [hall, setHall] = useState([{}]);
@@ -212,7 +219,7 @@ export default function AddEvent() {
                                     shrink: true,
                                 }}
                             />
-                            {/* <FormControl
+                            <FormControl
                                 error={Boolean(touched.hallId && errors.hallId)}
                                 key="hallOpten"
                                 className='inputt2'
@@ -231,17 +238,17 @@ export default function AddEvent() {
                                     key="departmentText"
                                 >
                                     {
-                                        hall.map((element) => {
-                                            <MenuItem>
+                                        hall.map((element) => (
+                                            <MenuItem key={element.value} value={element.value}>
                                                 {element.label}
                                             </MenuItem>
-                                        })
+                                        ))
                                     }
                                 </Select>
                                 <FormHelperText>
                                     {touched.hallId && errors.hallId}
                                 </FormHelperText>
-                            </FormControl> */}
+                            </FormControl>
                             <Typography className='labelevent'> Cost  </Typography>
                             <TextField
                                 error={Boolean(touched.CostClassA && errors.CostClassA)}
