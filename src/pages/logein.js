@@ -16,7 +16,7 @@ import Cookies from "js-cookie";
 
 const theme = createTheme();
 
-export default function Logein() {
+export default function Signup() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);

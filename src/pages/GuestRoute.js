@@ -7,6 +7,7 @@ import Events from "./Events"
 import Footer from "../Components/Footer"
 import Logein from "./logein";
 import Booking from '../Components/Booking';
+import Signup from "./Signup";
 const GuestRoute = () => {
     return (
         <StyledEngineProvider injectFirst>
@@ -19,6 +20,7 @@ const GuestRoute = () => {
                 {/* <Route exact path="/Ticket" component={<Redirect to="/logein" />} /> */}
                 <Route exact path="/Booking" component={Booking} />
                 <Route exact path="/logein" component={Logein} />
+                <Route exact path="/signup" component={Signup} />
             </Switch>
             <Footer />
         </StyledEngineProvider>
