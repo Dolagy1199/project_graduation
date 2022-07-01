@@ -64,7 +64,7 @@ class Buttons extends Component {
                                 <div className="img8 standupcomedy">
                                 </div>
                                 <Link fontSize={30} gutterBottom color={"#BB3B62"} fontWeight={700}
-                                    href="/event/standup comedy" underline="none" >
+                                    href="/event/standup-comedy" underline="none" >
                                     standup comedy
                                 </Link>
                             </div>

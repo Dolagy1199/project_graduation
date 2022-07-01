@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -8,6 +8,9 @@ import { styled } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
 import { Link } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import { authorizedAPIs } from '../API/axiosSetup';
+
+import CircularIndeterminate from '../Components/CircularIndeterminate';
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -51,100 +54,71 @@ const ColorButton = styled(Button)(({ theme }) => ({
         backgroundColor: pink[700],
     },
 }));
+
 export default function Events() {
     const { department } = useParams();
-    return (
-        <div className='team'>
-            <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
-                {department}
-            </Typography>
+    const [eventInformation, setEventInformation] = useState([]);
+    const [eventPoster, setEventPoster] = useState()
 
-            <div className="div1">
+    useEffect(() => {
+        authorizedAPIs.get(department === "all_event" ? `/event/showMany/100` : `/event/showMany/100/${department}`)
+            .then((res) => {
+                setEventInformation(res.data.result);
+                const eventDataInfo = [...res.data.result];
+                let posters = []
+                eventDataInfo.forEach((element) => {
+                    const poster = element.poster;
+                    posters.push(process.env.REACT_APP_MY_BACKEND_HOST + process.env.REACT_APP_EVENT_POSTER_PATH + poster);
+                });
+                setEventPoster(posters);
+            })
+            .catch((err) => {
+                setEventInformation({ "error": err });
+                console.log(err.message);
+            });
+
+    }, [])
+    console.log(eventPoster)
+
+    return (eventInformation ?
+        eventInformation.error ?
+            <>Error</>
+            : <div className='team'>
+                <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
+                    {department}
+                </Typography>
+
+                <div className="div1">
+                </div>
+                <div className="addeventbutton555">
+                    <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
+                </div>
+                <Box sx={{
+                    padding: 7,
+                    marginRight: 10,
+                    textAlign: 'center',
+                    marginLeft: 10,
+                }}>
+                    <Grid container spacing={2}>
+                        {eventInformation.map((element, index) => (
+                            <Grid item xs={6} key={index}>
+                                <Typography component={Link} color="blackuserAvatar" underline="none" href={`/Booking/${element._id}`}>
+                                    <div className='img1' style={{ backgroundImage: `url(${eventPoster[index]})` }}></div>
+                                </Typography>
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    {element.eventTitle}
+                                </Typography>
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    From : {new Date(element.startTime).toLocaleString()}
+                                </Typography>
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                                    To :   {new Date(element.endTime).toLocaleString()}
+                                </Typography>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Box>
             </div>
-
-
-            <div className="addeventbutton555">
-                <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
-            </div>
-            <Box sx={{
-                padding: 7,
-                marginRight: 10,
-                textAlign: 'center',
-                marginLeft: 10,
-            }}>
-                <Grid container spacing={1}>
-                    <Grid item xs={6}>
-
-                        <Typography component={Link} color="black" underline="none" href="/Booking">
-                            <div className='img1'></div>
-                        </Typography>
-
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            Name :Dolagy Baky Farhid
-
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            From : 12/12/2022 07:12 AM
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            To :   12/12/2022 09:30 AM
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={6}>
-
-                        <Typography component={Link} color="black" underline="none" href="/Booking">
-                            <div className='img1'></div>
-                        </Typography>
-
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            Name :Dolagy Baky Farhid
-
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            From : 12/12/2022 07:12 AM
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            To :   12/12/2022 09:30 AM
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={6}>
-
-                        <Typography component={Link} color="black" underline="none" href="/Booking">
-                            <div className='img1'></div>
-                        </Typography>
-
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            Name :Dolagy Baky Farhid
-
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            From : 12/12/2022 07:12 AM
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            To :   12/12/2022 09:30 AM
-                        </Typography>
-                    </Grid>
-
-                    <Grid item xs={6}>
-
-                        <Typography component={Link} color="black" underline="none" href="/Booking">
-                            <div className='img1'></div>
-                        </Typography>
-
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            Name :Dolagy Baky Farhid
-
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            From : 12/12/2022 07:12 AM
-                        </Typography>
-                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                            To :   12/12/2022 09:30 AM
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </Box>
-
-        </div>
+        : <CircularIndeterminate />
     );
 }

@@ -36,6 +36,7 @@ export default function Profile() {
                     setUserInfo(res.data.result);
                 })
                 .catch((error) => {
+                    console.log(error)
                     setUserInfo({ "error": error });
                 });
         }

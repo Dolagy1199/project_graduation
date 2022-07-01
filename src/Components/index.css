@@ -56,20 +56,19 @@
     background-color: #BB3B62;
     height: 40;
     position: absolute;
-    padding: 5px;
     margin-left: 38%;
     width: 250px;
     border-radius: 20px;
 }
 
 .img1 {
+    background-position: center;
     border-radius: 20px;
-    background-image: url("../Assets/h.jpg");
-    height: 350px;
-    padding: 20px;
-    margin: 30px;
-
-
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 10%;
+    margin-bottom: 2%;
 }
 
 .img00 {
