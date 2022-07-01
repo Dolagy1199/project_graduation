@@ -13,11 +13,11 @@
 
 .slider {
     position: center;
-    padding-left: 205px;
-    border-radius: 100px;
+    padding-left: 2%;
+    border-radius: 20%;
     border-style: calc(20);
-    border-width: 30px;
-    border-radius: 20px;
+    border-width: 30%;
+    border-radius: 5%;
 }
 
 .css-1ps4owl-MuiTypography-root-MuiLink-root {
@@ -96,20 +96,17 @@
 
 
 .img3 {
-    border-radius: 200px;
-    background-image: url("../Assets/h.jpg");
-    height: 250px;
-    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 40%;
+    width: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10 0;
-    border-width: 5px;
+    border-width: 4%;
     border-style: solid;
     border-color: #BB3B62;
-    padding-right: 70px;
-
-
 }
 
 .info {
@@ -126,7 +123,7 @@
 }
 
 .name {
-    margin: 23px 0 31px;
+    margin: 2% 30% 2% 40%;
 }
 
 
@@ -136,10 +133,8 @@
 
 .footer {
     background-color: #BB3B62;
-    height: 300px;
-
-    padding-top: 50px;
-    margin-top: 30px;
+    height: 10%;
+    margin-top: 10%;
 }
 
 
@@ -186,13 +181,12 @@
 
 
 .divprofile {
-    margin-top: 50px;
-    margin-left: 270px;
-    width: 1000px;
-    height: 1250px;
-    border-radius: 25px;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+    height: 1144px;
+    border-radius: 2%;
     background-color: #e3d5d5;
-    border-radius: 38px;
     display: flex;
     flex-direction: column;
     align-items: center;

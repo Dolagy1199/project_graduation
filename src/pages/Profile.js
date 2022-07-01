@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -9,18 +9,13 @@ import FeaturedVideoIcon from '@mui/icons-material/FeaturedVideo';
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
-
-
-
-
-
-
 import { styled } from '@mui/material/styles';
 import '../Components/index.css'
-
 import Paper from '@mui/material/Paper';
-import { positions } from '@mui/system';
+import CircularIndeterminate from '../Components/CircularIndeterminate';
+import { authorizedAPIs } from '../API/axiosSetup';
+import { Button } from '@mui/material';
+
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -30,73 +25,30 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-class Profile extends Component {
-    render() {
-        return (
-
-            /*
-            <div className='team'>
-                <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
-                    ABOUT US
-                </Typography>
-
-                <div className="div1">
-                </div>
-
-
-
-
-                <Box sx={{
-                    padding: 7,
-                    marginRight: 10,
-                    textAlign: 'center',
-                    marginLeft: 10,
-                }}>
-                    <Grid container spacing={1}>
-                        <Grid item xs={4}>
-                            <div className="img1">
-                            </div>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <div className="img1">
-                            </div>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <div className="img1">
-                            </div>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Software Developer
-                            </Typography>
-                        </Grid>
-                    </Grid>
-
-                </Box>
-
-            </div>
-            */
-
-            <div className='divprofile'>
+export default function Profile() {
+    const [userInfo, setUserInfo] = useState();
+    const [userAvatar, setUserAvatar] = useState()
+    useEffect(() => {
+        const getUserData = async () => {
+            await authorizedAPIs.get("/user/profile")
+                .then((res) => {
+                    console.log(res.data.result);
+                    setUserInfo(res.data.result);
+                })
+                .catch((error) => {
+                    setUserInfo({ "error": error });
+                });
+        }
+        if (userInfo && userInfo.avatar) {
+            setUserAvatar(process.env.REACT_APP_MY_BACKEND_HOST + process.env.REACT_APP_USER_AVATAR_PATH + userInfo.avatar);
+        }
+        if (!userInfo)
+            getUserData()
+    }, [userInfo, userAvatar]);
+    return (userInfo ?
+        userInfo.error ?
+            <>Not Found</> :
+            < div className='divprofile' >
 
                 <Box sx={{
                     padding: 7,
@@ -105,57 +57,57 @@ class Profile extends Component {
                     marginLeft: 30,
                 }}></Box>
 
-                <Grid container spacing={1}>
-                    <Grid item xs={12}>
-                        <div className="img3">
+                <Grid container spacing={1} sx={{ height: 'auto%' }}>
+                    <Grid item xs={12} >
+                        <div className="img3" style={{ backgroundImage: `url(${userAvatar})` }}>
                         </div>
                         <div className='info'>
                             <Typography fontSize={32} gutterBottom variant="h1" component="div" fontWeight={700} className='name'>
-                                Dolagy Baky Farhid
+                                {userInfo.firstName}{" "}{userInfo.lastName}
 
                             </Typography>
-                            <Typography fontSize={14} gutterBottom variant="h6" className='details' >
-                                “ if you equip people with me right
-                                tools . i will build the most
-                                exptraordinary things”
-                            </Typography>
-
                         </div>
                         <div className="team_details">
                             <Typography fontSize={24} fontWeight={400} className="Typography">
-                                <PersonIcon className='icon1' /> 22 Years
+                                <PersonIcon className='icon1' /> {userInfo.age} Years
 
                             </Typography>
                             <Typography fontSize={24} fontWeight={400} className="Typography">
-                                <LocalPostOfficeIcon className='icon1' /> dolagydolagy1199@gmail.com
+                                <LocalPostOfficeIcon className='icon1' />{userInfo.email}
 
                             </Typography>
 
                             <Typography fontSize={24} fontWeight={400} className="Typography">
-                                <CallIcon className='icon1' />   01282677208
+                                <CallIcon className='icon1' />   {userInfo.phoneNumber}
 
                             </Typography>
                             <Typography fontSize={24} fontWeight={400} className="Typography">
-                                <AccountCircleIcon className='icon1' /> Female
+                                <AccountCircleIcon className='icon1' /> {userInfo.gender}
 
                             </Typography>
                             <Typography fontSize={24} fontWeight={400} className="Typography">
-                                <FeaturedVideoIcon className='icon1' />   30009092602283
+                                <FeaturedVideoIcon className='icon1' />   {userInfo.nationalId}
 
                             </Typography>
-                            <Typography fontSize={24} fontWeight={400} className="Typography">
-                                <HandshakeIcon className='icon1' /> Partner
+                            {
+                                (userInfo.isaPartner ?
+                                    <Typography fontSize={24} fontWeight={400} className="Typography">
+                                        <HandshakeIcon className='icon1' /> Partner
+                                    </Typography>
+                                    : <Typography fontSize={24} fontWeight={400} className="Typography">
+                                        <HandshakeIcon className='icon1' /> Client
+                                    </Typography>
+                                )
+                            }
 
-                            </Typography>
-                            <Typography fontSize={24} fontWeight={400} className="Typography">
+                            <Typography fontSize={24} fontWeight={400} className="Typography" component={Button} href="/show-all-ticket">
                                 <BookOnlineIcon className='icon1' />   Tickets
 
                             </Typography>
                         </div>
                     </Grid>
                 </Grid>
-            </div>
-        );
-    }
+            </div >
+        : <CircularIndeterminate />
+    );
 }
-export default Profile;
