@@ -28,7 +28,7 @@ export default function Logein() {
         }
         await authorizedAPIs
             .post(
-                "/authintication/login", submissionInfo
+                "/authintication/loginUser", submissionInfo
             )
             .then((res) => {
                 Cookies.set(process.env.REACT_APP_TOKEN_NAME, res.data.token);

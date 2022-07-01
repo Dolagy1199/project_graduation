@@ -22,4 +22,14 @@ const authorizedAPIs = axios.create({
   },
 });
 
-export { authinticationAPIs, authorizedAPIs };
+const uploadImageAPIS = axios.create({
+  baseURL: `${process.env.REACT_APP_MY_BACKEND_HOST}`,
+  timeout: 3000,
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    'Content-Type': 'multipart/form-data',
+    authorization: `123=${token}`,
+  },
+})
+
+export { authinticationAPIs, authorizedAPIs, uploadImageAPIS };

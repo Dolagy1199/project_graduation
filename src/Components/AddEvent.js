@@ -8,11 +8,13 @@ import { pink } from '@mui/material/colors';
 import InputLabel from "@mui/material/InputLabel";
 import * as Yup from 'yup';
 import { useEffect, useState } from 'react';
-import { authorizedAPIs } from "../API/axiosSetup";
+import { uploadImageAPIS, authorizedAPIs } from "../API/axiosSetup";
 import { FormHelperText } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import { showAlert } from "../Redux/actions/viewAlert";
+import { useDispatch } from 'react-redux';
 
 const ColorButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(pink[700]),
@@ -24,6 +26,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 export default function AddEvent() {
     const [hall, setHall] = useState([{}]);
+    const dispatch = useDispatch()
     useEffect(() => {
         authorizedAPIs.get("/halls/showMany/100")
             .then((res) => {
@@ -41,6 +44,25 @@ export default function AddEvent() {
             });
     }, []);
 
+    const handelAddEvent = async (values,{resetForm}) => {
+        let formData = new FormData();
+        var imagefile = document.querySelector('#poster');
+        const Cost = [values.CostClassA, values.CostClassB, values.CostClassC];
+        formData.append("posterImage", imagefile.files[0]);
+        formData.append("Cost", Cost);
+        formData.append("eventTitle", values.eventTitle);
+        formData.append("department", values.department);
+        formData.append("presenter", values.presenter);
+        formData.append("startTime", new Date(values.startTime).valueOf());
+        formData.append("endTime", new Date(values.endTime).valueOf());
+        formData.append("hallId", values.hallId);
+        await uploadImageAPIS.post('/event/new', formData).then((res) => {
+            dispatch(showAlert("successfully Operation", "success"));
+            resetForm();
+        }).catch((err) =>
+            dispatch(showAlert(err.message, "error"))
+        )
+    }
     return (
         <div className='team' >
             <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
@@ -75,8 +97,8 @@ export default function AddEvent() {
                         , CostClassB: Yup.number().required()
                         , CostClassC: Yup.number().required()
                     })}
-                onSubmit={(values) => {
-                    console.log(values);
+                onSubmit={(values, resetForm) => {
+                    handelAddEvent(values, resetForm);
                 }}
             >
                 {({
@@ -85,7 +107,7 @@ export default function AddEvent() {
                     handleChange,
                     handleSubmit,
                     touched,
-                    values
+                    values,
                 }) => (
                     <form onSubmit={(e) => {
                         e.preventDefault();

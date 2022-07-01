@@ -100,7 +100,7 @@ class Team extends Component {
                                 </div>
 
                                 <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                    Dolagy Baky Farhid
+                                    Andrew Haliem
 
                                 </Typography>
                                 <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
@@ -117,7 +117,7 @@ class Team extends Component {
                                 </div>
 
                                 <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                    Dolagy Baky Farhid
+                                    Abanoub Kamel
 
                                 </Typography>
                                 <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
