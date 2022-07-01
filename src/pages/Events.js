@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
-export default function AboutUs() {
+export default function Event() {
     return (
         <div>
             <Events />

@@ -28,7 +28,7 @@ export default function AddEvent() {
     const [hall, setHall] = useState([{}]);
     const dispatch = useDispatch()
     useEffect(() => {
-        authorizedAPIs.get("/halls/showMany/100")
+        authorizedAPIs.get("/halls/showAllInOneCompany")
             .then((res) => {
                 console.log(res);
                 let hallInformation = [];
@@ -56,7 +56,7 @@ export default function AddEvent() {
         formData.append("startTime", new Date(values.startTime).valueOf());
         formData.append("endTime", new Date(values.endTime).valueOf());
         formData.append("hallId", values.hallId);
-        await uploadImageAPIS.post('/event/showAllInOneCompany', formData).then((res) => {
+        await uploadImageAPIS.post('/event/new', formData).then((res) => {
             dispatch(showAlert("successfully Operation", "success"));
             resetForm();
         }).catch((err) =>
@@ -174,7 +174,7 @@ export default function AddEvent() {
                                     <MenuItem key="concerts" value="concerts">
                                         concerts
                                     </MenuItem>
-                                    <MenuItem key="standup" value="standup-comedy">
+                                    <MenuItem key="standup_comedy" value="standup-comedy">
                                         standup comedy
                                     </MenuItem>
                                 </Select>

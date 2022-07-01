@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
 import { Link } from '@mui/material';
+import { useParams } from 'react-router-dom';
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -50,106 +51,100 @@ const ColorButton = styled(Button)(({ theme }) => ({
         backgroundColor: pink[700],
     },
 }));
-class Events extends Component {
-    render() {
+export default function Events() {
+    const { department } = useParams();
+    return (
+        <div className='team'>
+            <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
+                {department}
+            </Typography>
 
-
-        return (
-
-
-            <div className='team'>
-                <Typography fontSize={45} gutterBottom variant="h1" component="div" color="#BB3B62" fontWeight="bold" textAlign="center">
-                    CINEMA
-                </Typography>
-
-                <div className="div1">
-                </div>
-
-
-                <div className="addeventbutton555">
-                    <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
-                </div>
-                <Box sx={{
-                    padding: 7,
-                    marginRight: 10,
-                    textAlign: 'center',
-                    marginLeft: 10,
-                }}>
-                    <Grid container spacing={1}>
-                        <Grid item xs={6}>
-
-                            <Typography component={Link} color="black" underline="none" href="/Booking">
-                                <div className='img1'></div>
-                            </Typography>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                From : 12/12/2022 07:12 AM
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                To :   12/12/2022 09:30 AM
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={6}>
-
-                            <Typography component={Link} color="black" underline="none" href="/Booking">
-                                <div className='img1'></div>
-                            </Typography>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                From : 12/12/2022 07:12 AM
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                To :   12/12/2022 09:30 AM
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={6}>
-
-                            <Typography component={Link} color="black" underline="none" href="/Booking">
-                                <div className='img1'></div>
-                            </Typography>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                From : 12/12/2022 07:12 AM
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                To :   12/12/2022 09:30 AM
-                            </Typography>
-                        </Grid>
-
-                        <Grid item xs={6}>
-
-                            <Typography component={Link} color="black" underline="none" href="/Booking">
-                                <div className='img1'></div>
-                            </Typography>
-
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                Name :Dolagy Baky Farhid
-
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                From : 12/12/2022 07:12 AM
-                            </Typography>
-                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
-                                To :   12/12/2022 09:30 AM
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Box>
-
+            <div className="div1">
             </div>
-        );
-    }
+
+
+            <div className="addeventbutton555">
+                <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
+            </div>
+            <Box sx={{
+                padding: 7,
+                marginRight: 10,
+                textAlign: 'center',
+                marginLeft: 10,
+            }}>
+                <Grid container spacing={1}>
+                    <Grid item xs={6}>
+
+                        <Typography component={Link} color="black" underline="none" href="/Booking">
+                            <div className='img1'></div>
+                        </Typography>
+
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            Name :Dolagy Baky Farhid
+
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            From : 12/12/2022 07:12 AM
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            To :   12/12/2022 09:30 AM
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+
+                        <Typography component={Link} color="black" underline="none" href="/Booking">
+                            <div className='img1'></div>
+                        </Typography>
+
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            Name :Dolagy Baky Farhid
+
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            From : 12/12/2022 07:12 AM
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            To :   12/12/2022 09:30 AM
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+
+                        <Typography component={Link} color="black" underline="none" href="/Booking">
+                            <div className='img1'></div>
+                        </Typography>
+
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            Name :Dolagy Baky Farhid
+
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            From : 12/12/2022 07:12 AM
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            To :   12/12/2022 09:30 AM
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={6}>
+
+                        <Typography component={Link} color="black" underline="none" href="/Booking">
+                            <div className='img1'></div>
+                        </Typography>
+
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            Name :Dolagy Baky Farhid
+
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            From : 12/12/2022 07:12 AM
+                        </Typography>
+                        <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >
+                            To :   12/12/2022 09:30 AM
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Box>
+
+        </div>
+    );
 }
-export default Events;

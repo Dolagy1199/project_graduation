@@ -16,7 +16,7 @@ import { useHistory } from "react-router";
 
 
 
-const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/AboutUs" }, { label: 'Events', link: "/events" }];
+const pages = [{ label: "Home", link: "/" }, { label: "About us", link: "/AboutUs" }, { label: 'Events', link: "/event/true" }];
 
 const theme = createTheme({
 
