@@ -7,8 +7,9 @@ import Event from "./Events"
 import Footer from "../Components/Footer"
 import Profiler from "./Profile";
 import AddEvent from '../Components/AddEvent'
-import Ticket from '../Components/Ticket';
-import Booking from '../Components/Booking';
+import OneTicket from '../pages/OneTicket';
+import OneEvent from '../Components/OneEvent';
+import AllTicket from "./AllTicket";
 
 const PagesRoutes = () => {
     return (
@@ -20,8 +21,9 @@ const PagesRoutes = () => {
                 <Route path="/event/:department" component={Event} />
                 <Route exact path="/profile" component={Profiler} />
                 <Route exact path="/AddEvent" component={AddEvent} />
-                <Route exact path="/Ticket" component={Ticket} />
-                <Route exact path="/Booking" component={Booking} />
+                <Route path="/ticket/:_id" component={OneTicket} />
+                <Route path="/oneevent/:_id" component={OneEvent} />
+                <Route exact path="/showallticket" component={AllTicket} />
                 <Route path="*" component={Home} />
             </Switch>
             <Footer />

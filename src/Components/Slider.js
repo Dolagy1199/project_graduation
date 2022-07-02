@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
+import { authorizedAPIs } from '../API/axiosSetup';
 import './index.css'
 
 export default function Slider() {
@@ -11,7 +12,21 @@ export default function Slider() {
         { url: "https://images.indianexpress.com/2020/07/Dell-G5-15-2020-fb.jpg" },
         { url: "https://img.etimg.com/photo/msid-74744213,quality-100/hp-14q-cy0005au.jpg" },
     ]);
+    useEffect(() => {
+        authorizedAPIs.get('/event/slider').then((res) => {
+            const postersData = [...res.data];
+            let posters = []
+            postersData.forEach(element => {
+                const url = process.env.REACT_APP_MY_BACKEND_HOST + process.env.REACT_APP_EVENT_POSTER_PATH + element.poster;
+                posters = [...posters, url];
+            });
+            console.log(posters);
+            setImages(posters);
+        })
+            .catch((err) => {
+            });
 
+    }, [])
     return (
         <div className='slider'>
             <SimpleImageSlider
@@ -20,6 +35,8 @@ export default function Slider() {
                 height={"400px"}
                 images={images}
                 showBullets={true}
+                autoPlay={true}
+                autoPlayDelay={2.0}
                 showNavs={true}
                 useGPURender={true}
                 navStyle={1}

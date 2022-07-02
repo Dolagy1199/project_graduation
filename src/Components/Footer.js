@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import './index.css';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Link } from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -17,7 +15,6 @@ class Footer extends Component {
 
 
             <div className="footer" >
-
                 <Box sx={{
                     padding: 7,
                     marginRight: 10,

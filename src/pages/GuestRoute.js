@@ -5,9 +5,10 @@ import Home from './Home'
 import AboutUs from "./AboutUs"
 import Footer from "../Components/Footer"
 import Logein from "./logein";
-import Booking from '../Components/Booking';
+import OneEvent from '../Components/OneEvent';
 import Signup from "./Signup";
 import Event from "./Events";
+import AllTicket from "./AllTicket";
 const GuestRoute = () => {
     return (
         <StyledEngineProvider injectFirst>
@@ -16,11 +17,12 @@ const GuestRoute = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/AboutUs" component={AboutUs} />
                 <Route path="/event/:department" component={Event} />
-                {/* <Route exact path="/Ticket" component={Logein} /> */}
-                {/* <Route exact path="/Ticket" component={<Redirect to="/logein" />} /> */}
-                <Route exact path="/Booking" component={Booking} />
+                <Route exact path="/oneevent" component={OneEvent} />
                 <Route exact path="/logein" component={Logein} />
                 <Route exact path="/signup" component={Signup} />
+                <Route exact path="/showallticket" component={AllTicket} />
+                <Route path="*" component={Home} />
+
             </Switch>
             <Footer />
         </StyledEngineProvider>

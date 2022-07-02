@@ -78,7 +78,6 @@ export default function Events() {
             });
 
     }, [])
-    console.log(eventPoster)
 
     return (eventInformation ?
         eventInformation.error ?
@@ -102,7 +101,7 @@ export default function Events() {
                     <Grid container spacing={2}>
                         {eventInformation.map((element, index) => (
                             <Grid item xs={6} key={index}>
-                                <Typography component={Link} color="blackuserAvatar" underline="none" href={`/Booking/${element._id}`}>
+                                <Typography component={Link} color="blackuserAvatar" underline="none" href={`/oneevent/${element._id}`}>
                                     <div className='img1' style={{ backgroundImage: `url(${eventPoster[index]})` }}></div>
                                 </Typography>
                                 <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" >

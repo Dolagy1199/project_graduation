@@ -101,7 +101,7 @@ export default function Profile() {
                                 )
                             }
 
-                            <Typography fontSize={24} fontWeight={400} className="Typography" component={Button} href="/show-all-ticket">
+                            <Typography fontSize={24} fontWeight={400} className="Typography" component={Button} href="/showallticket">
                                 <BookOnlineIcon className='icon1' />   Tickets
 
                             </Typography>
