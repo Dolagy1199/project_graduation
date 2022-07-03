@@ -21,7 +21,6 @@ export default function AllTicket() {
     return (
         <>
 
-            HERE
             <AllTickets />
         </>
     );
