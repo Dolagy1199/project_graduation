@@ -119,7 +119,8 @@
 
 .footer {
     background-color: #BB3B62;
-    height: 10%;
+    height: 30%;
+    width: 100%;
     margin-top: 10%;
     bottom: 0;
 }

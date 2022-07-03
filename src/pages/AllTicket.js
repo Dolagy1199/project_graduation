@@ -1,6 +1,6 @@
 import react, { useEffect, useState } from 'react';
 import { authorizedAPIs } from '../API/axiosSetup';
-import  AllTickets from '../Components/AllTickets'
+import AllTickets from '../Components/AllTickets'
 
 
 export default function AllTicket() {
@@ -17,9 +17,12 @@ export default function AllTicket() {
 
         });
     }, [])*/
+    console.log("HERE");
     return (
         <>
-    <AllTickets/>
+
+            HERE
+            <AllTickets />
         </>
     );
 }
