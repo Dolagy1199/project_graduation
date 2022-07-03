@@ -9,7 +9,6 @@ import Profiler from "./Profile";
 import AddEvent from '../Components/AddEvent'
 import OneTicket from '../pages/OneTicket';
 import OneEvent from '../Components/OneEvent';
-
 import AllTicket from "./AllTicket";
 
 const PagesRoutes = () => {
