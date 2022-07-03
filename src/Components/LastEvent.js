@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 import './index.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Img from '../Assets/h.jpg'
-import { Link } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 

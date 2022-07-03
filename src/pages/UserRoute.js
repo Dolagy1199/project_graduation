@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import PersistentDrawerRight from "../Components/Navbar";
 import { StyledEngineProvider } from "@mui/material/styles";
 import Home from './Home'
@@ -25,8 +25,6 @@ const PagesRoutes = () => {
                 <Route path="/ticket/:_id" component={OneTicket} />
                 <Route path="/oneevent/:_id" component={OneEvent} />
                 <Route exact path="/showallticket" component={AllTicket} />
-
-
                 <Route path="*" component={Home} />
             </Switch>
             <Footer />
