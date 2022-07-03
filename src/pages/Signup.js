@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -17,11 +17,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
 import { uploadImageAPIS, authorizedAPIs } from "../API/axiosSetup";
 import Cookies from "js-cookie";
+import Alert from '@mui/material/Alert';
 
 const theme = createTheme();
 
 
-export default function Logein() {
+export default function Signup() {
+    const [error, setError] = useState(false)
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -48,6 +50,8 @@ export default function Logein() {
                     });
             })
             .catch((error) => {
+                console.log(error);
+                setError(error.response.data);
             });
     };
 
@@ -199,6 +203,10 @@ export default function Logein() {
                     </Box>
                 </Box>
             </Container>
+            {error === false ? <></> :
+                <Alert severity="error">
+                    {error}— <strong>check it out!</strong>
+                </Alert>}
         </ThemeProvider >
     );
 }

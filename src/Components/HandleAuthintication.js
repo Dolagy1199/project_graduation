@@ -21,7 +21,7 @@ const Handleauthintication = () => {
         setIslogged(true);
         setIsloading(false);
       })
-      .catch(() => {
+      .catch((error) => {
         setIslogged(false);
         setIsloading(false);
         handleLogOut();

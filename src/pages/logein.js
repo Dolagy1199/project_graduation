@@ -13,10 +13,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
 import { authorizedAPIs } from "../API/axiosSetup";
 import Cookies from "js-cookie";
-
+import Alert from '@mui/material/Alert';
 const theme = createTheme();
 
 export default function Signup() {
+    const [error, setError] = React.useState(false);
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -35,6 +36,8 @@ export default function Signup() {
                 document.location.reload()
             })
             .catch((error) => {
+                setError(error.response.data);
+                console.log(error.response.data);
             });
 
     };
@@ -96,6 +99,13 @@ export default function Signup() {
                     </Box>
                 </Box>
             </Container>
+            {
+                error === false ? <></> :
+                    <Alert severity="error">
+                        {error}— <strong>check it out!</strong>
+                    </Alert>
+
+            }
         </ThemeProvider>
     );
 }

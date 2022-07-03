@@ -3,9 +3,7 @@ import './index.css'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import CircularIndeterminate from './CircularIndeterminate';
 import TimeCountDown from './TimeCountDown';
-import { authorizedAPIs } from '../API/axiosSetup';
 
 
 export default function TicketInf({ ticket }) {
@@ -140,7 +138,19 @@ export default function TicketInf({ ticket }) {
                                 </Typography>
                             </Typography>
 
+                            <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                marginTop: "20px",
+                                color: "#bb3b62",
+                                alignItems: "baseline",
+                            }}  >
+                                Ticket number:
 
+                                <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ color: "black" }}  >
+                                    {ticket._id}
+                                </Typography>
+                            </Typography>
 
                         </Grid>
                     </Grid>
