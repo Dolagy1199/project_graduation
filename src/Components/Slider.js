@@ -32,7 +32,7 @@ export default function Slider() {
             <SimpleImageSlider
                 style={{ marginTop: "2%" }}
                 width={"80%"}
-                height={"400px"}
+                height={"600px"}
                 images={images}
                 showBullets={true}
                 autoPlay={true}

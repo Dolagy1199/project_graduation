@@ -55,7 +55,8 @@ class Services extends Component {
                                 <Typography fontSize={30} gutterBottom fontWeight={700} marginRight={10} paddingTop={2} className="servicesfont">
                                     Do you want to inquire about tickets and payment?                             </Typography>
                                 <Typography fontSize={20} gutterBottom fontWeight={400} marginRight={10} className="servicesfont">
-                                    When a party is canceled, the full value of the ticket will be refunded in case of payment                   </Typography>
+                                    if you don't pay within twenty-four hours, the ticket will be canceled
+                                </Typography>
                             </Grid>
 
 
@@ -64,7 +65,7 @@ class Services extends Component {
                                 <Typography fontSize={30} gutterBottom fontWeight={700} marginRight={10} paddingTop={2} className="servicesfont">
                                     It happened and the party was canceled ?                         </Typography>
                                 <Typography fontSize={20} gutterBottom fontWeight={400} marginRight={10} className="servicesfont">
-                                    The fourth service, if you don't pay within twenty-four hours, the ticket will be canceled                       </Typography>
+                                    When a party is canceled, the full value of the ticket will be refunded in case of payment </Typography>
                             </Grid>
                         </Grid>
 

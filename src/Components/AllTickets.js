@@ -17,397 +17,61 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-export default function MediaCard() {
+export default function AllTickets({ tickets }) {
     return (
 
         <div className="newcard" >
 
             <Box sx={{ flexGrow: 1 }} paddingTop={5} paddingBottom={10}>
                 <Grid container spacing={3}>
-                    <Grid item xs={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
+                    {
+                        tickets.map((element) => (
+                            <Grid item xs={4}
+                                component={Button}
+                                href={`/ticket/${element._id}`}
+                            >
+                                <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                        component="img"
+                                        height="400px"
+                                        image={element.poster}
+                                        alt={element.eventTitle}
 
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
+                                    />
+                                    <CardContent>
+                                        <Typography fontSize={23} fontWeight="bold">{element.eventTitle}</Typography>
+                                        <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            color: "#bb3b62",
+                                            marginTop: "20px",
+                                            alignItems: "baseline",
+                                        }}  >
+                                            From  :
+                                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                                {new Date(element.startTime).toLocaleString()}
+                                            </Typography>
+                                        </Typography>
 
-                            </CardContent>
+                                        <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            color: "#bb3b62",
+                                            marginTop: "20px",
+                                            alignItems: "baseline",
+                                        }}  >
+                                            To:
+                                            <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
+                                                {new Date(element.endTime).toLocaleString()}
+                                            </Typography>
+                                        </Typography>
 
-                        </Card>
+                                    </CardContent>
 
-                    </Grid>
-
-                    <Grid item xs={4}>
-
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
-                </Grid>
-            </Box>
-
-
-            <Box sx={{ flexGrow: 1 }} paddingTop={5} paddingBottom={10}>
-                <Grid container spacing={3}>
-                    <Grid item xs={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-
-                    </Grid>
-
-                    <Grid item xs={4}>
-
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
-                </Grid>
-            </Box>
-
-
-            <Box sx={{ flexGrow: 1 }} paddingTop={5} paddingBottom={10}>
-                <Grid container spacing={3}>
-                    <Grid item xs={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-
-                    </Grid>
-
-                    <Grid item xs={4}>
-
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography fontSize={23} fontWeight="bold">Andrew Work At Google</Typography>
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    From  :
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                                <Typography fontSize={23} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    color: "#bb3b62",
-                                    marginTop: "20px",
-                                    alignItems: "baseline",
-                                }}  >
-                                    To:
-                                    <Typography fontSize={20} gutterBottom variant="h1" component="div" fontWeight="bold" sx={{ marginLeft: "6px", color: "black" }}  >
-                                        {new Date().toLocaleString()}
-                                    </Typography>
-                                </Typography>
-
-                            </CardContent>
-
-                        </Card>
-                    </Grid>
+                                </Card>
+                            </Grid>
+                        ))
+                    }
                 </Grid>
             </Box>
 

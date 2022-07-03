@@ -1,28 +1,37 @@
 import react, { useEffect, useState } from 'react';
 import { authorizedAPIs } from '../API/axiosSetup';
 import AllTickets from '../Components/AllTickets'
-
+import { Alert } from '@mui/material';
+import CircularIndeterminate from '../Components/CircularIndeterminate';
 
 export default function AllTicket() {
-    /*const [tickets, setTicket] = useState();
+    const [tickets, setTicket] = useState();
+    const [error, setError] = useState();
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         authorizedAPIs.get("/ticket/showMany").then((res) => {
             const TicketDataInfo = [...res.data.result];
             TicketDataInfo.forEach((element) => {
                 const poster = element.poster;
-                posters.push(process.env.REACT_APP_MY_BACKEND_HOST + process.env.REACT_APP_EVENT_POSTER_PATH + poster);
+                element.poster = process.env.REACT_APP_MY_BACKEND_HOST + process.env.REACT_APP_EVENT_POSTER_PATH + poster;
             });
-
+            setTicket(TicketDataInfo);
+            setLoading(true);
         }).catch((error) => {
-
+            setError(error.response.data);
+            setLoading(true);
         });
-    }, [])*/
-    console.log("HERE");
-    return (
-        <>
-
-            <AllTickets />
-        </>
+    }, [])
+    console.log(tickets);
+    return (loading === true ?
+        error ?
+            <Alert severity="error">
+                {error}— <strong>check it out!</strong>
+            </Alert>
+            : <>
+                <AllTickets tickets={tickets} />
+            </>
+        : <CircularIndeterminate />
     );
 }
 

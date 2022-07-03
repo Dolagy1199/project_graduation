@@ -55,7 +55,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
     },
 }));
 
-export default function Events() {
+export default function Events({ partner }) {
     const { department } = useParams();
     const [eventInformation, setEventInformation] = useState([]);
     const [eventPoster, setEventPoster] = useState()
@@ -89,9 +89,11 @@ export default function Events() {
 
                 <div className="div1">
                 </div>
-                <div className="addeventbutton555">
-                    <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
-                </div>
+                {partner === true ?
+                    <div className="addeventbutton555">
+                        <ColorButton variant="contained" className="addevent" href='/AddEvent'>ADD EVENT</ColorButton>
+                    </div> : <></>
+                }
                 <Box sx={{
                     padding: 7,
                     marginRight: 10,
