@@ -9,6 +9,9 @@ import OneEvent from '../Components/OneEvent';
 import Signup from "./Signup";
 import Event from "./Events";
 import AllTicket from "./AllTicket";
+import AddEvent from '../Components/AddEvent'
+
+
 const GuestRoute = () => {
     return (
         <StyledEngineProvider injectFirst>
@@ -21,6 +24,7 @@ const GuestRoute = () => {
                 <Route exact path="/logein" component={Logein} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/showallticket" component={AllTicket} />
+                <Route exact path="/AddEvent" component={AddEvent} />
                 <Route path="*" component={Home} />
 
             </Switch>

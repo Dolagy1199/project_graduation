@@ -126,7 +126,7 @@ export default function AddEvent() {
                                 value={values.eventTitle}
                                 key="eventTitleText"
                                 size="lg"
-                                placeholder="Enter  Event Name"
+                                placeholder="Enter Event Name"
                                 aria-label='Frist'
                                 className='inputt'
                             />

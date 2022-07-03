@@ -13,7 +13,7 @@ export default function DropdownList() {
 
   return (
     <FormControl sx={{ m: 1, minWidth: 120 ,borderBlockColor:"#BB3B62" }} size="small">
-      <InputLabel id="demo-select-small">Cost</InputLabel>
+      <InputLabel id="demo-select-small">Hall</InputLabel>
       <Select
         labelId="demo-select-small"
         id="demo-select-small"
@@ -24,9 +24,9 @@ export default function DropdownList() {
         <MenuItem value="">
          
         </MenuItem>
-        <MenuItem value={10}>classA : 1000</MenuItem>
-        <MenuItem value={20}>classB : 2000</MenuItem>
-        <MenuItem value={30}>classC : 2000</MenuItem>
+        <MenuItem value={10}>Lorenz Hall</MenuItem>
+        <MenuItem value={20}>Baron Palace</MenuItem>
+        <MenuItem value={30}>Concorde Hall</MenuItem>
       </Select>
     </FormControl>
   );

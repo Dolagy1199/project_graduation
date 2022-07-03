@@ -9,6 +9,7 @@ import Profiler from "./Profile";
 import AddEvent from '../Components/AddEvent'
 import OneTicket from '../pages/OneTicket';
 import OneEvent from '../Components/OneEvent';
+
 import AllTicket from "./AllTicket";
 
 const PagesRoutes = () => {
@@ -24,6 +25,8 @@ const PagesRoutes = () => {
                 <Route path="/ticket/:_id" component={OneTicket} />
                 <Route path="/oneevent/:_id" component={OneEvent} />
                 <Route exact path="/showallticket" component={AllTicket} />
+
+
                 <Route path="*" component={Home} />
             </Switch>
             <Footer />
